@@ -1,44 +1,47 @@
-header {
+header
+{
   width: 100%;
   background-color: lightblue;
 }
 
-h2 {
+h2
+{
   text-align: left;
 }
 
-ul {
+ul
+{
   text-align: right;
   color: #ffffff;
 }
 
 /* List items in navigation bar */
-li {
+li
+{
   /* TODO: Add your code here */
+  display: inline;
   list-style-type: none;
   font-size: 40px;
 }
 
-/* Boxes */
-img {
+img
+{
   /* TODO: Add your code here */
+  display: block;
   margin: 0 auto;
 }
 
-#item-1 {
+#item-1
+{
   background-color: #e0115f;
 }
 
-#item-2 {
+#item-2
+{
   background-color: #0000ff;
 }
 
-#item-3 {
+#item-3
+{
   background-color: #999900;
-}
-
-/* Box 3 */
-#image-3 {
-  /* TODO: Add your code here */
-  display: none;
 }
