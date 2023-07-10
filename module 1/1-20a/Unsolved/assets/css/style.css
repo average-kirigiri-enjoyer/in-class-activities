@@ -29,7 +29,8 @@ header {
 }
 
 /* Square 1 and 2 */
-.container {
+.container 
+{
   width: 600px;
   height: 600px;
   margin: 20px auto;
@@ -42,11 +43,16 @@ header {
 }
 
 /* Box 2 in Square 1 */
-#relative-box-2 {
-  /* TODO: Set the position so it is centered in Square 1 */
+#relative-box-2
+{
+  position: relative;
+  left: 200px;
 }
 
 /* Box 2 in Square 2 */
-#absolute-box-2 {
-  /* TODO: Set the position so it is outside of the upper-right corner of Square 2 */
+#absolute-box-2
+{
+  position: absolute;
+  left: 715px;
+  bottom: 400px;
 }
