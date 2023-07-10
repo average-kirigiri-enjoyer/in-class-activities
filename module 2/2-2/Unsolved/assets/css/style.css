@@ -41,6 +41,11 @@ header {
   {
     width: 50%;
   }
+
+  header
+  {
+    background-color: green;
+  }
 }
 
 @media screen and (max-width: 768px)
@@ -48,6 +53,11 @@ header {
   .card
   {
     width: 100%;
+  }
+
+  header
+  {
+    background-color: red;
   }
 }
 
