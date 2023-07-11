@@ -15,15 +15,16 @@ header {
 }
 
 /* 
-What happens when we set the display property to flex? 
-TODO: Write your answer here 
+allows the navigation bar to adjust its size and proportions based on screen size, stacking with other elements once a certain size is reached
 */
-nav {
+nav
+{
   display: flex;
   background-color: #d8a47f;
 }
 
-nav a {
+nav a
+{
   color: #13293d;
   padding: 14px 20px;
   text-decoration: none;
@@ -31,12 +32,12 @@ nav a {
 }
 
 /* 
-What is the flex-wrap property? 
-TODO: Write your answer here 
+makes flexible items wrap around each other if they would otherwise cross the edge of their container
 */
-main {
+main
+{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 aside {
@@ -55,8 +56,7 @@ footer {
 }
 
 /* 
-What does the justify-content property do? 
-TODO: Write your answer here 
+aligns flexible items at the center of their container
 */
 .products {
   flex: 4;
@@ -68,9 +68,7 @@ TODO: Write your answer here
 }
 
 /* 
-What is the flex property a shorthand property for?
-What is it doing here? 
-TODO: Write your answer here 
+flex is a shorthand for flex-grow, flex-shrink, and flex-basis; in this case, grow & shrink are set to 0, i.e., the containers won't change size at all as screen size changes, and the will have a base size of 400px
 */
 .card {
   border-style: solid;
@@ -93,9 +91,7 @@ TODO: Write your answer here
 }
 
 /* 
-What does the flex-direction property define?
-What is it doing here? 
-TODO: Write your answer here 
+flex-direction defines how flexible objects will reorganize themselves as page shape changes; in this case, it is set to column, i.e., when an element needs to be rearranged, it will prioritize doing so vertically
 */
 @media screen and (max-width: 768px) {
   main,
