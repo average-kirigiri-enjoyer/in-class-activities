@@ -22,6 +22,10 @@ h2 {
   font-size: 250%;
 }
 
+h3 {
+  font-size: 200%;
+}
+
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -36,6 +40,16 @@ nav a {
 
 nav a:hover {
   color: #fff;
+}
+
+.resources
+{
+  display: none;
+}
+
+article .resources:hover 
+{
+  display: block;
 }
 
 main {
