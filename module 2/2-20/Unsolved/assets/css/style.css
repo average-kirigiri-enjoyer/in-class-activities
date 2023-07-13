@@ -85,7 +85,7 @@ button {
   cursor: pointer;
 }
 
-/* What does this CSS rule do? */
+/* normalizes appearance of drop-down menu across browsers */
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -112,12 +112,12 @@ select:hover, button:hover {
   box-shadow: 0 0 5px #999;
 }
 
-/* What does this pseudo-class mean? */
+/* makes the border thicker on the right side when you click on the text input box*/
 .text-input:focus {
   border-right-width: 5px;
 }
 
-/* What does this pseudo-class mean? */
+/* when the placeholder text is in the input box (i.e. the user has not input anything), the border will be dashed*/
 .text-input:placeholder-shown {
   border-style: dashed;
 }
@@ -136,13 +136,13 @@ select:hover, button:hover {
   margin-right: 2%;
 }
 
-/* What does this selector do? */
+/* when the checkbox is checked, changes the appearance of the text and adds a label */
 .checkbox:checked + label {
   color: #999999;
   font-style: italic;
 }
 
-/* What does this selector do? */
+/* defines the label which appears after checking the above checkbox */
 .checkbox:checked + label::after {
   margin-left: 10px;
   font-size: 90%;
