@@ -59,9 +59,28 @@ article p {
   font-size: 110%;
 }
 
-/* TODO: Style the term/phrase - underline, black text, grab cursor */
+.tooltip
+{
+  position: relative;
+  display: inline-block;
+}
 
-/* TODO: Position tooltip above the term/phrase, same color as header and nav links, no border-radius, smaller font size */
+.tooltip .tooltipText
+{
+  visibility: hidden;
+  width: 120px;
+  background-color: #232323;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+}
+
+.tooltip:hover .tooltipText
+{
+  visibility: visible
+}
 
 aside {
   width: 25%;
