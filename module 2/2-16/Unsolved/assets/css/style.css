@@ -42,12 +42,12 @@ nav a:hover {
   color: #fff;
 }
 
-.resources
+.resources .links
 {
   display: none;
 }
 
-article .resources:hover 
+.resources:hover .links
 {
   display: block;
 }
