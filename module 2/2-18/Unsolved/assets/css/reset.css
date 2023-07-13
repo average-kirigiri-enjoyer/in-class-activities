@@ -27,3 +27,29 @@ pre, code {
 ol, ul {
   list-style: none;
 }
+
+.tooltipText
+{
+  visibility: hidden;
+  width: 120px;
+  background-color: #232323;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.tooltip:hover .tooltipText
+{
+  visibility: visible
+}
+
+.tooltip
+{
+  text-decoration: underline;
+}
+
+.tooltip:hover
+{
+  
+}
