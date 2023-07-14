@@ -22,6 +22,12 @@ h2 {
   font-size: 250%;
 }
 
+a[href $= ".css"]::after
+{
+  content: "📝";
+  display: inline-block;
+}
+
 nav ul {
   display: flex;
   justify-content: space-between;
