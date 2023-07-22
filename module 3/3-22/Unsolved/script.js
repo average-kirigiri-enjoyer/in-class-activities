@@ -1,18 +1,23 @@
 //WRITE YOUR CODE BELOW
 
-var customerDrink = ["Coffee", 2, true];
+var customerDrink = 
+{
+    name: "Coffee",
+    sugars: 2,
+    isReady: false,
+};
 
-console.log(customerDrink[0])
-console.log(customerDrink[1])
+console.log(customerDrink.name);
+console.log(customerDrink.sugars);
 
 function isDrinkReady()
 {
-    if (customerDrink[2])
+    if (customerDrink.isReady)
     {
-        console.log("Ready for pick-up")
+        console.log("Ready for pick-up");
     }
     else
     {
-        console.log("Still in order queue")
+        console.log("Still in order queue");
     }
 }

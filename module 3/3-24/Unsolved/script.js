@@ -1,30 +1,40 @@
-var chosenPet = "I AM LOSING IT";
-var dogs = ["Mackie", "Bernice", "Cookie Monster", "Spot"];
-var cats = ["Astrid", "Lulu", "Fluffy", "Mouser"];
+var chosenPet = "PEE PEE";
 
-var shelter = {
-  apptMessage: function () {
+var shelter = 
+{
+  dogs: ["Mackie", "Bernice", "Cookie Monster", "Spot"],
+  cats: ["Astrid", "Lulu", "Fluffy", "Mouser"],
+
+  apptMessage: function ()
+  {
     console.log("Email us at meetafriend@waywardpets.com to make an appointment to meet your new friend.");
   }
 };
 
 //Debug the code below 
-function dogMessage() {
+function dogMessage()
+{
    console.log("Congrats! " + chosenPet + ", a great dog, is available for adoption!");
    shelter.apptMessage();
 }
 
-function catMessage() {
+function catMessage()
+{
   console.log("Congrats! " + chosenPet + ", an awesome cat, is available for adoption!");
   shelter.apptMessage();
 }
 
-if (dogs.includes(chosenPet)) {
+if (shelter.dogs.includes(chosenPet))
+{
   dogMessage();
-} else if (cats.includes(chosenPet)) {
+}
+else if (shelter.cats.includes(chosenPet))
+{
   catMessage();
-} else {
+}
+else
+{
   console.log("It looks like the pet is not available.");
-  console.log("Check out our featured dog, " + dogs[0] + ". or our featured cat, " + cats[0]);
+  console.log("Check out our featured dog, " + shelter.dogs[0] + ", or our featured cat, " + shelter.cats[0]);
 }
   
