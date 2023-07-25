@@ -1,12 +1,11 @@
-// TODO: What will the following line of code log?
+// logs all the properties of the browser window plus the html file path
 console.log(window);
 
-// TODO: What will the following line of code log?
+// logs all the content of the html file and it's file path
 console.log(window.document);
 
-// TODO: What will the following line of code log?
+// logs the root element of the document
 console.log(document.documentElement);
 
-// TODO: What will the following line of code log?
+// logs the head element of the document
 console.log(document.head);
-
