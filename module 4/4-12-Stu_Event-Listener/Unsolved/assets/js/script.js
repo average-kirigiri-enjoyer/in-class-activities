@@ -15,15 +15,11 @@ function increment()
 
 function decrement()
 {
-  count--;
-
-  if (count < 0)
+  if (count >= 0)
   {
-    count = 0;
-    return;
+    count--;
+    setCounterText();
   }
-  
-  setCounterText();
 }
 
 // TODO: Add event listener to increment button
