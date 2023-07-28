@@ -8,8 +8,6 @@ container.addEventListener("click", function(event) {
     var boxNumber = element.getAttribute("data-number");
     var boxState = element.getAttribute("data-state")
 
-    
-
     console.log(element.getAttribute("data-state"))
     if (boxState === "hidden")
     {
