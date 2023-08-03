@@ -1,5 +1,6 @@
 var shoppingFormEl = $('#shopping-form');
 var shoppingListEl = $('#shopping-list');
+var deleteButton = $(".delete-item-btn");
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -30,6 +31,16 @@ function handleFormSubmit(event) {
 
 // TODO: Create a function to handle removing a list item when `.delete-item-btn` is clicked
 
+function removeListItem(event)
+{
+  if (event.target.matches("button"))
+  {
+    shoppingListEl.children().first().remove();
+  }
+}
+
 // TODO: Use event delegation and add an event listener to `shoppingListEl` to listen for a click event on any element with a class of `.delete-item-btn` and execute the function created above
 
 shoppingFormEl.on('submit', handleFormSubmit);
+
+shoppingListEl.on("click", removeListItem);
