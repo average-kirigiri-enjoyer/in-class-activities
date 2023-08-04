@@ -7,4 +7,16 @@
 }
 
 /* Add your custom class style definitions here */
+
+.custom-navbar
+{
+  background-color: greenyellow;
+}
+
+body
+{
+  color: aqua;
+  background-color: orange;
+}
+
 /* HINT: Apply CSS variables using `var(--brown)` syntax as your property value */

@@ -32,5 +32,18 @@ formEl.on('submit', handleFormSubmit);
 // Add Autocomplete widget here
 //
 
+$(function()
+{
+  var availableTags = ["genius!", "reallyawesome", "thebest", "showersatleastonceaweek", "deodorantstickeater"];
+  nameInputEl.autocomplete({source: availableTags});
+});
+
+
+
+
 // Add Datepicker widget here
 //
+$(function()
+{
+  dateInputEl.datepicker();
+});

@@ -6,6 +6,16 @@
   --light: #fffaf7;
 }
 
+p
+{
+  font-family: Raleway;
+}
+
+h1
+{  
+  font-family: Raleway;
+}
+
 ::selection {
   color: var(--brown);
   background-color: var(--light);
