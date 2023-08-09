@@ -2,6 +2,7 @@ var formEl = $('#skills-form');
 var nameInputEl = $('#skill-name');
 var dateInputEl = $('#datepicker');
 var skillsListEl = $('#skills-list');
+var skillItems = skillsListEl.children();
 
 var printSkills = function (name, date) {
   var listEl = $('<li>');
@@ -66,3 +67,9 @@ $(function () {
 
 // Add interaction here
 //
+
+skillsListEl.sortable(
+{
+  revert: "invalid",
+  placeholder: "skill-item-placeholder"
+});

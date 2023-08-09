@@ -17,3 +17,18 @@ h6 {
   font-weight: 200;
   font-style: italic;
 }
+
+/* i got the following code from the link below;
+https://laracasts.com/discuss/channels/javascript/ow-to-set-placeholder-for-jquery-ui-sortable */
+.skill-item-placeholder
+{
+  height: inherit;
+  padding: 20px;
+  background: lavender;
+  opacity: .8;
+}
+
+ul
+{
+  list-style-type: none;
+}
