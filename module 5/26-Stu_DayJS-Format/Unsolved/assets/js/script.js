@@ -6,7 +6,7 @@ $("#1a").text(dayjs("2024-01-04").format("MMM D, YYYY"));
 
 // TODO: 2. What day of the week will 1/1/2027 be? (e.g. Is it "Monday"?)
 
-$("#2a").text(dayjs("2027-01-07").format("dddd"));
+$("#2a").text(dayjs("2027-01-01").format("dddd"));
 
 // TODO: 3. What is the current time in the format: hours:minutes:seconds
 
@@ -22,7 +22,7 @@ $("#5a").text(dayjs(1318781876));
 
 // TODO: 6. What is the difference in days between May 4, 2027 and today? Hint:
 
-$("#6a").text(dayjs("2027-05-04").diff(dayjs(), "d") + " days");
+$("#6a").text(dayjs("2027-05-04").diff(dayjs(), "M") + " months");
 
 // You can display the difference between two dayjs objects by using the dayjs
 // diff method.)

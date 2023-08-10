@@ -1,7 +1,7 @@
 var requestUrl = 'https://api.github.com/orgs/Netflix/repos';
 
 // JQuery AJAX
-// TODO: Comment on how AJAX returns an API call
+// returns the relevant data as an array of objects
 $.ajax({
   url: requestUrl,
   method: 'GET',
@@ -11,7 +11,7 @@ $.ajax({
 });
 
 // Browser Fetch Method
-// TODO: Comment on how Fetch returns an API call
+// returns the relevant data as an array of objects
 fetch(requestUrl)
   .then(function (response) {
     return response.json();
@@ -22,7 +22,7 @@ fetch(requestUrl)
   });
 
 // Browser XMLHttpRequest
-// TODO: Comment on how XMLHttpRequest returns an API call
+// returns the relevant data as a json string
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
   if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -34,3 +34,8 @@ xhr.open('GET', requestUrl);
 xhr.send();
 
 // TODO: Comment on the differences on the format of the data that was returned
+// XML returns the data as a json string
+// ajax and fetch both return the data as an array of objects
+// they basically do the same thing except fetch is kinda like a pentuim single-core single-thread processor
+// where it can only do one thing at a time, whereas ajax is more like my ryzen 7 5700x 8-core 16-threaded processor, it can do up to 16 things at once!
+// fetch uses javascript which is the pentium single core, and you have to parse the jason data with a then statement after you retrieve the data

@@ -22,7 +22,6 @@ h6 {
 https://laracasts.com/discuss/channels/javascript/ow-to-set-placeholder-for-jquery-ui-sortable */
 .skill-item-placeholder
 {
-  height: inherit;
   padding: 20px;
   background: lavender;
   opacity: .8;
