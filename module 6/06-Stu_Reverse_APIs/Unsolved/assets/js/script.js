@@ -11,7 +11,7 @@ $.ajax({
 });
 
 // Browser Fetch Method
-// returns the relevant data as an array of objects
+// // retrieves the relevant data as a JSON string which is then converted to and returned as an array of objects
 fetch(requestUrl)
   .then(function (response) {
     return response.json();
@@ -22,7 +22,7 @@ fetch(requestUrl)
   });
 
 // Browser XMLHttpRequest
-// returns the relevant data as a json string
+// returns the relevant data as a JSON string
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
   if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -35,7 +35,5 @@ xhr.send();
 
 // TODO: Comment on the differences on the format of the data that was returned
 // XML returns the data as a json string
-// ajax and fetch both return the data as an array of objects
-// they basically do the same thing except fetch is kinda like a pentuim single-core single-thread processor
-// where it can only do one thing at a time, whereas ajax is more like my ryzen 7 5700x 8-core 16-threaded processor, it can do up to 16 things at once!
-// fetch uses javascript which is the pentium single core, and you have to parse the jason data with a then statement after you retrieve the data
+// the AJAX and fetch requests return the data as an array of objects
+// note that the fetch request retrieves the data as a JSON string, which is then parsed within the request code
