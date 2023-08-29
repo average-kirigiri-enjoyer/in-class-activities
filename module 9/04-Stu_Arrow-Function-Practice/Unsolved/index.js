@@ -1,5 +1,5 @@
 // 1. funnyCase makes each letter in a string the opposite case as the one before
-var funnyCase = (string) => {
+var funnyCase = string => {
   var newString = "";
   for (var i = 0; i < string.length; i++) {
     if (i % 2 === 0) newString += string[i].toLowerCase();
@@ -25,9 +25,7 @@ var map = (arr, cb) => {
 
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-var doubled = map(numbers, (element) => {
-  return element * 2;
-});
+var doubled = map(numbers, element => element * 2);
 
 // Prints `[ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]`
 console.log(doubled);
@@ -46,9 +44,7 @@ var filter = (arr, cb) => {
   return result;
 };
 
-var evenNumbers = filter(numbers, (currentElement) => {
-  return currentElement % 2 === 0;
-});
+var evenNumbers = filter(numbers, currentElement => currentElement % 2 === 0);
 
 // Prints `[ 2, 4, 6, 8, 10 ]`
 console.log(evenNumbers);
