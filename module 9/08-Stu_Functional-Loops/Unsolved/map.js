@@ -10,10 +10,10 @@ console.log(doubledArray);
 console.log(originalArray);
 
 
-// TODO: Describe how map is working in the example below. What will the value of tripledArray be?
+// map triples all items in originalArray, the result will be [3, 9, 6, 15, 30]
 const tripledArray = originalArray.map(data => data * 3);
 
-// TODO: Describe how map is working in the example below. What will the value of oddOrEven be?
+// map returns whether or not a number is odd or even, the result will be, odd, odd, even, odd, even
 const oddOrEven = originalArray.map(num => {
   if (num % 2 === 0) {
     return 'even'
@@ -21,3 +21,6 @@ const oddOrEven = originalArray.map(num => {
     return 'odd'
   }
 });
+
+console.log(tripledArray);
+console.log(oddOrEven);
