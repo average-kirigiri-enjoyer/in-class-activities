@@ -1,0 +1,12 @@
+{
+  "name": "16-stu_maths",
+  "version": "1.0.0",
+  "description": "Work with a partner to resolve the following issue(s):",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

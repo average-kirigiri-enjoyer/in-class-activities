@@ -1,0 +1,22 @@
+{
+  "name": "18-stu_package-npm",
+  "version": "1.0.0",
+  "description": "activity_9-18_npm_package",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"hello\")"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/average-kirigiri-enjoyer/in-class-activities.git"
+  },
+  "author": "average-kirigiri-enjoyer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/average-kirigiri-enjoyer/in-class-activities/issues"
+  },
+  "homepage": "https://github.com/average-kirigiri-enjoyer/in-class-activities#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
