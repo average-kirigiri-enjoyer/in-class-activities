@@ -1,0 +1,14 @@
+{
+  "name": "15-ins_modularization",
+  "version": "1.0.0",
+  "description": "testing npm init",
+  "main": "index.js",
+  "scripts": {
+    "test": "console.log(\"hello\")"
+  },
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
