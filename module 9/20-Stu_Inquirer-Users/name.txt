@@ -1,0 +1,3 @@
+Name: Ethan
+Languages: HTML,CSS,JavaScript,Arduino,Python
+Communcation Method: Speech
