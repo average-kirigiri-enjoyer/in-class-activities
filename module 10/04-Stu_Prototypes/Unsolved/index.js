@@ -11,7 +11,7 @@ function BlogPost(authorName, title, text, createdOn) {
 }
 
 // TODO: Add a comment describing the purpose of `.prototype` in this method declaration
-BlogPost.prototype.addComent = function(comment) {
+BlogPost.prototype.addComment = function(comment) {
   this.comments.push(comment);
 };
 
@@ -22,7 +22,7 @@ const post = new BlogPost(
   '12/16/2021'
 );
 
-post.addComent('Nice post, I like it!');
+post.addComment('Nice post, I like it!');
 
 // TODO: Add a comment describing what you expect to see printed in the console
 console.log(post.comments);
