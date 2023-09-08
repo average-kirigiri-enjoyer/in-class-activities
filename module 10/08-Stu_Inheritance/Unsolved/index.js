@@ -1,12 +1,20 @@
 // TODO: Create a class constructor named ForumItem that takes in 'authorName', 'text', and 'createdOn'.
 
-// TODO: Setup BlogPost and Comment so they inherit their structure from ForumItem.
-class BlogPost {
-  constructor(authorName, title, text, createdOn) {
+class ForumItem
+{
+  constructor(authorName, text, createdOn)
+  {
     this.authorName = authorName;
-    this.title = title;
     this.text = text;
     this.createdOn = createdOn;
+  }
+}
+
+// TODO: Setup BlogPost and Comment so they inherit their structure from ForumItem.
+class BlogPost extends ForumItem {
+  constructor(authorName, title, text, createdOn) {
+    super(this, authorName, text, createdOn);
+    this.title = title;
     this.comments = [];
   }
 
@@ -15,11 +23,9 @@ class BlogPost {
   }
 }
 
-class Comment {
+class Comment extends ForumItem {
   constructor(authorName, text, createdOn, reaction) {
-    this.authorName = authorName;
-    this.text = text;
-    this.createdOn = createdOn;
+    super(this, authorName, text, createdOn);
     this.reaction = reaction;
   }
 }
@@ -28,4 +34,10 @@ class Comment {
 
 // TODO: Create a new object using the BlogPost class constructor.
 
+const EpiccOMMENT = new Comment("Ethan", "THIS COMMENT ROCKS!", "2023/09/07", "👍");
+const epicBlogPost = new BlogPost("Hussain", "So About That Guy Who Notified 400k People in the Epic Games Dev Group With a PR...", "That was WILD!", "2023/09/07");
+
 // TODO: Log both newly created BlogPost and Comment to the console.
+
+console.log(epicBlogPost);
+console.log(EpiccOMMENT);
