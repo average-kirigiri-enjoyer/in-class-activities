@@ -16,15 +16,15 @@ inquirer.prompt([
 {
 	type: "list",
 	message: "What is your preferred method of communcation?",
-	name: "communcation",
+	name: "communication",
 	choices: ["Speech", "Hand signals", "Telepathy"],
 },])
 .then(function(data)
 {
 	const name = `Name: ${data.name}`;
 	const languages = `Languages: ${data.languages}`;
-	const communcation = `Communcation Method: ${data.communcation}`;
-	const userInputData = name + "\n" + languages + "\n" + communcation;
+	const communication = `Communcation Method: ${data.communication}`;
+	const userInputData = name + "\n" + languages + "\n" + communication;
 
 	fs.writeFile("./name.txt", userInputData, function(err)
 	{
