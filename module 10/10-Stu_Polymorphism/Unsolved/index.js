@@ -29,6 +29,10 @@ class Comment extends ForumItem {
     super(authorName, text, createdOn);
     this.reaction = reaction;
   }
+
+  printMetaData() {
+    console.log(`Created by ${this.authorName} on ${this.createdOn} ${this.reaction}`);
+  }
 }
 
 const newPost = new BlogPost(
