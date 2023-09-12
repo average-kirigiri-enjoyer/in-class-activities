@@ -1,5 +1,5 @@
 // TODO: Create a class constructor named ForumItem that takes in 'authorName', 'text', and 'createdOn'.
-// ES6
+/* ES6
 class ForumItem
 {
   constructor(authorName, text, createdOn)
@@ -32,20 +32,25 @@ class Comment extends ForumItem
     super(authorName, text, createdOn);
     this.reaction = reaction;
   }
-}
+}*/
 
-/* ES5
-function ForumItem(authorName, text, createdOn)
+// ES5
+function ForumItem(authorName, createdOn)
 {
   this.authorName = authorName;
-  this.text = text;
   this.createdOn = createdOn;
+}
+
+function titleAndText(title, text)
+{
+  this.title = title;
+  this.text = text;
 }
 
 function BlogPost(authorName, title, text, createdOn)
 {
-  ForumItem.call(this, authorName, text, createdOn);
-  this.title = title;
+  ForumItem.call(this, authorName, createdOn);
+  titleAndText.call(this, title, text);
   this.comments = [];
 }
 
@@ -56,9 +61,10 @@ BlogPost.prototype.addComment = function(comment)
 
 function Comment(authorName, text, createdOn, reaction)
 {
-  ForumItem.call(this, authorName, text, createdOn);
+  ForumItem.call(this, authorName, createdOn);
+  this.text = text;
   this.reaction = reaction;
-}*/
+}
 
 // TODO: Setup BlogPost and Comment so they inherit their structure from ForumItem.
 
