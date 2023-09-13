@@ -3,6 +3,7 @@ const Comment = require('../lib/Comment.js');
 
 describe('BlogPost', () => {
   // TODO: Add a comment describing this test.
+  // tests if a new BlogPost was created properly and is of the expected type
   describe('Instantiate', () => {
     it('should be an instance of BlogPost class', () => {
       const blogpost = new BlogPost();
@@ -12,6 +13,7 @@ describe('BlogPost', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if authorName was assigned to the appropriate property properly
   describe('Initialize authorName', () => {
     it('should set authorName properly', () => {
       const authorName = 'John Doe';
@@ -22,6 +24,7 @@ describe('BlogPost', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if the blog post's title was assigned to the appropriate property properly
   describe('Initialize title', () => {
     it('should set title properly', () => {
       const title = 'My First Post';
@@ -32,6 +35,7 @@ describe('BlogPost', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if the blog post's text was assigned to the appropriate property properly
   describe('Initialize text', () => {
     it('should set text properly', () => {
       const text = 'Dogs are super cute!';
@@ -42,6 +46,7 @@ describe('BlogPost', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if the blog post's creation date is correct
   describe('Initialize createdOn', () => {
     it('should set createdOn properly', () => {
       const createdOn = '12/15/2021';
@@ -57,6 +62,7 @@ describe('BlogPost', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if the newly created blog post has zero comments
   describe('Initialize comments', () => {
     it('should create blogpost array with a length of 0', () => {
       const blogpost = new BlogPost();
@@ -66,6 +72,7 @@ describe('BlogPost', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // creates a new comment, adds it to the blog post, and tests if the comment was created properly and is of the expected type
   describe('addComment() method', () => {
     it('should add comment to comments array', () => {
       const blogpost = new BlogPost();
@@ -77,6 +84,7 @@ describe('BlogPost', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if the blog post's printMetaData method prints the correct data to console
   describe('printMetaData() method', () => {
     it('should print message with data', () => {
       const blogpost = new BlogPost(

@@ -2,6 +2,7 @@ const ForumItem = require('../lib/ForumItem.js');
 
 describe('ForumItem', () => {
   // Add a comment describing this test.
+  // tests if a new forumItem was created properly and is of the expected type
   describe('Instantiate', () => {
     it('should be an instance of ForumItem class', () => {
       const forumitem = new ForumItem();
@@ -11,6 +12,7 @@ describe('ForumItem', () => {
   });
 
   // Add a comment describing this test.
+  // tests if authorName was assigned to the appropriate property properly
   describe('Initialize authorName', () => {
     it('should set authorName properly', () => {
       const authorName = 'Jack Doe';
@@ -21,6 +23,7 @@ describe('ForumItem', () => {
   });
 
   // Add a comment describing this test.
+  // tests if text was assigned to the appropriate property properly
   describe('Initialize text', () => {
     it('should set text properly', () => {
       const text = 'This is some random text';
@@ -31,6 +34,7 @@ describe('ForumItem', () => {
   });
 
   // Add a comment describing this test.
+  // tests if the forumItem's creation date is correct
   describe('Initialize createdOn', () => {
     it('should set createdOn properly', () => {
       const createdOn = '12/15/2021';
@@ -45,6 +49,7 @@ describe('ForumItem', () => {
   });
 
   // Add a comment describing this test.
+  // tests if the forumItem's printMetaData prints the correct data
   describe('printMetaData() method', () => {
     it('should print message with data', () => {
       const forumitem = new ForumItem(

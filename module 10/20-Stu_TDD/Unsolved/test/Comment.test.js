@@ -2,6 +2,7 @@ const Comment = require('../lib/Comment.js');
 
 describe('Comment', () => {
   // TODO: Add a comment describing this test.
+  // tests if a new comment was created properly and is of the expected type
   describe('Instantiate', () => {
     it('should be an instance of Comment class', () => {
       const comment = new Comment();
@@ -11,6 +12,7 @@ describe('Comment', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if authorName was assigned to the appropriate property properly
   describe('Initialize authorName', () => {
     it('should set authorName properly', () => {
       const authorName = 'Jane Doe';
@@ -21,6 +23,7 @@ describe('Comment', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if text was assigned to the appropriate property properly
   describe('Initialize text', () => {
     it('should set text properly', () => {
       const text = 'This post is super cool!';
@@ -31,6 +34,7 @@ describe('Comment', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if the comment's creation date is correct
   describe('Initialize createdOn', () => {
     it('should set createdOn properly', () => {
       const createdOn = '12/15/2021';
@@ -45,6 +49,7 @@ describe('Comment', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if th comment's reaction is correct
   describe('Initialize reaction', () => {
     it('should set reaction properly', () => {
       const reaction = '🐶';
@@ -60,6 +65,7 @@ describe('Comment', () => {
   });
 
   // TODO: Add a comment describing this test.
+  // tests if the comment's printMetaData prints the correct data
   describe('printMetaData() method', () => {
     it('should print message with data', () => {
       const comment = new Comment(
