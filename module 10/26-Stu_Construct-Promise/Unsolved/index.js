@@ -1,6 +1,7 @@
 const http = require('http');
 
 // TODO: What does this function return?
+// returns a promise that will resolve with the data from an http .get request
 const asyncRequest = (url) =>
   new Promise((resolve, reject) => {
     let error;
@@ -30,9 +31,11 @@ const asyncRequest = (url) =>
         // response status code was 200.
         if (error) {
           // TODO: What the following line do?
+          // if there was an error, rejects the promise with the error object
           reject(error);
         } else {
           // TODO: What does the following line do?
+          // resolves the promise the data from the http .get request
           resolve(rawData);
         }
       });
@@ -40,6 +43,8 @@ const asyncRequest = (url) =>
 
 asyncRequest('http://numbersapi.com/random/trivia')
   // TODO: When is the callback function passed to .then() called by the promise?
+  // callback function called if the promise is resolved
   .then((data) => console.log(data))
   // TODO: When is the callback function passed to .catch() called by the promise?
+  // callback function called if the promise is rejected
   .catch((error) => console.log(error));
