@@ -48,18 +48,25 @@ app.post('/api/reviews', (req, res) => {
     const reviewString = JSON.stringify(newReview);
 
     // Write the string to a file
-    fs.appendFile(`./db/reviews.json`, reviewString, (err) =>
-      err
-        ? console.error(err)
-        : console.log(
-            `Review for ${newReview.product} has been written to JSON file`
-          )
-    );
-
-    const response = {
-      status: 'success',
-      body: newReview,
-    };
+    fs.readFile('./db/reviews.json', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        // Convert string into JSON object
+        const parsedReviews = JSON.parse(data);
+        // Add a new review
+        parsedReviews.push(newReview);
+        // Write updated reviews back to the file
+        fs.writeFile(
+          './db/reviews.json',
+          JSON.stringify(parsedReviews, null, 4),
+          (writeErr) =>
+            writeErr
+              ? console.error(writeErr)
+              : console.info('Successfully updated reviews!')
+        );
+      }
+    });
 
     console.log(response);
     res.status(201).json(response);

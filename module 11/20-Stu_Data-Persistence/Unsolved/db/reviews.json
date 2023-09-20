@@ -1,1 +1,20 @@
-{"product":"test","review":"test","username":"test","review_id":"62ac"}{"product":"test","review":"test","username":"test","review_id":"fffb"}
+[
+    {
+        "product": "test",
+        "review": "test",
+        "username": "test",
+        "review_id": "62ac"
+    },
+    {
+        "product": "test",
+        "review": "test",
+        "username": "test",
+        "review_id": "e070"
+    },
+    {
+        "product": "test",
+        "review": "test",
+        "username": "test",
+        "review_id": "5d6d"
+    }
+]
