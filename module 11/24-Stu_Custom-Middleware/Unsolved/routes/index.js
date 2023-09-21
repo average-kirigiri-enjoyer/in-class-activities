@@ -9,10 +9,10 @@ const feedbackRouter = require('./feedback');
 
 const app = express();
 
-app.use('/tips', tipsRouter);
-app.use('/feedback', feedbackRouter);
-
 // Initialize custom middleware
 app.use(clog);
+
+app.use('/tips', tipsRouter);
+app.use('/feedback', feedbackRouter);
 
 module.exports = app;

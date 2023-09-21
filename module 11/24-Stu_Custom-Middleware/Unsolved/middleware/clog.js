@@ -7,7 +7,7 @@ const clog = (req, res, next) => {
       break;
     }
     case 'POST': {
-      console.info(`📘 ${fgCyan}${req.method} request to ${req.path}`);
+      console.info(`📘 \x1b[38;5;125m${req.method} request to ${req.path}`);
       break;
     }
     default:
