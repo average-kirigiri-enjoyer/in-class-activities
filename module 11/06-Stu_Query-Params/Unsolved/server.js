@@ -30,11 +30,9 @@ app.get('/api/terms/', (req, res) => {
   return res.json(termData);
 });
 
-// TODO: Add a comment describing what this route will return
 // route to return a specific term from the list of terms
 app.get('/api/term/:term', (req, res) => {
-  // TODO: Add a comment describing the content of req.params in this instance
-  // req.params refers to the parameters attached to the client's URL request
+  // req.params refers to the parameters attached to the client's URL reques; in this care, the value entered in the place of ":term"
   const requestedTerm = req.params.term.toLowerCase();
 
   for (let i = 0; i < termData.length; i++) {

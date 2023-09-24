@@ -2,11 +2,12 @@ const petEl = document.getElementById('pets');
 const termButton = document.getElementById('term-btn');
 
 const getPets = () =>
-  fetch('/api/pets', {
+  fetch('/api/pets',
+  {
     method: 'GET',
   })
-    .then((res) => res.json())
-    .then((data) => data);
+  .then((res) => res.json())
+  .then((data) => data);
 
 const renderPet = (pet) => {
   const cardEl = document.createElement('div');
@@ -29,6 +30,6 @@ const renderPet = (pet) => {
 };
 
 const buttonHandler = () =>
-  getPets().then((response) => response.forEach((item) => renderPet(item)));
+getPets().then((response) => response.forEach((item) => renderPet(item)));
 
 termButton.addEventListener('click', buttonHandler);

@@ -38,7 +38,8 @@ app.get('/api/reviews/:review_id', (req, res) => {
 });
 
 // POST request to add a review
-app.post('/api/reviews', (req, res) => {
+app.post('/api/reviews', (req, res) =>
+{
   // Log that a POST request was received
   console.info(`${req.method} request received to add a review`);
 
@@ -46,13 +47,18 @@ app.post('/api/reviews', (req, res) => {
   let response;
 
   // Check if there is anything in the response body
-  if (req.body && req.body.product) {
-    response = {
+  if (req.body && req.body.product)
+  {
+    response =
+    {
       status: 'success',
       data: req.body,
     };
+
     res.status(201).json(response);
-  } else {
+  }
+  else
+  {
     res.status(400).json('Request body must at least contain a product name');
   }
 
@@ -61,20 +67,27 @@ app.post('/api/reviews', (req, res) => {
 });
 
 // POST request to upvote a review
-app.post('/api/upvotes/:review_id', (req, res) => {
-  if (req.body && req.body.upvote && req.params.review_id) {
+app.post('/api/upvotes/:review_id', (req, res) =>
+{
+  if (req.body && req.body.upvote && req.params.review_id)
+  {
     console.info(`${req.method} request received to upvote a review`);
     const reviewId = req.params.review_id;
-    for (let i = 0; i < reviews.length; i++) {
+
+    for (let i = 0; i < reviews.length; i++)
+    {
       const currentReview = reviews[i];
-      if (currentReview.review_id === reviewId) {
+      if (currentReview.review_id === reviewId)
+      {
         currentReview.upvotes += 1;
         res.status(200).json(`New upvote count is: ${currentReview.upvotes}!`);
         return;
       }
     }
     res.status(404).json('Review ID not found');
-  } else {
+  }
+  else
+  {
     res.status(500).json("Provide a req.body or review ID");
   }
 });
