@@ -82,5 +82,53 @@
         "tip": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         "topic": "UI",
         "tip_id": "2d92"
+    },
+    {
+        "username": "Sarah",
+        "tip": "Make your application accessible by adding alt properties ",
+        "topic": "UI",
+        "tip_id": "ccaf"
+    },
+    {
+        "username": "Sarah",
+        "tip": "AAAAAAAAAAAAAAAAAAAAAAAA ",
+        "topic": "UI",
+        "tip_id": "ce1a"
+    },
+    {
+        "username": "Sarah",
+        "tip": "AAAAAAAAAAAAAAAAAAAAAAAA ",
+        "topic": "UI",
+        "tip_id": "9634"
+    },
+    {
+        "username": "Sarah",
+        "tip": "AAAAAAAAAAAAAAAAAAAAAAAA ",
+        "topic": "UI",
+        "tip_id": "28ba"
+    },
+    {
+        "username": "Sarah",
+        "tip": "AAAAAAAAAAAAAAAAAAAAAAAA ",
+        "topic": "UI",
+        "tip_id": "90f8"
+    },
+    {
+        "username": "Sarah",
+        "tip": "AAAAAAAAAAAAAAAAAAAAAAAA ",
+        "topic": "UI",
+        "tip_id": "74e1"
+    },
+    {
+        "username": "Sarah",
+        "tip": "AAAAAAAAAAAAAAAAAAAAAAAA ",
+        "topic": "UI",
+        "tip_id": "acf4"
+    },
+    {
+        "username": "Sarah",
+        "tip": "AAAAAAAAAAAAAAAAAAAAAAAA ",
+        "topic": "UI",
+        "tip_id": "410e"
     }
 ]
