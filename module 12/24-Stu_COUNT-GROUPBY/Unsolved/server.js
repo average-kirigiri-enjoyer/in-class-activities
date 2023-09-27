@@ -28,10 +28,12 @@ db.query('SELECT COUNT(id) AS total_count FROM favorite_books GROUP BY in_stock'
 });
 
 //selects and logs various pieces of data regarding the books in each section
-//how many books are in each section
-//which section has the most books
-//which section has the least books
-//what is the average quantity of books in each section
+//sums total numbers of all books including duplicates
+//logs the total number of books in the section
+//logs the largest number of copies available for a single book
+//logs the smallest number of copies available for a single book
+//logs the average number of copies available for each book
+//repeats the above for all five sections
 db.query('SELECT SUM(quantity) AS total_in_section, MAX(quantity) AS max_quantity, MIN(quantity) AS min_quantity, AVG(quantity) AS avg_quantity FROM favorite_books GROUP BY section', function (err, results) {
   console.log(results);
 });
