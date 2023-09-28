@@ -1,5 +1,6 @@
 -- Add your code below and execute file in MySQL Shell --
-SELECT favorite_books.book_name as name, book_prices.price as price
+SELECT favorite_books.book_name as name,
+       book_prices.price as price
 FROM favorite_books
 JOIN book_prices
-ON favourite_books.book_prices = book_prices.id;
+ON favorite_books.book_price = book_prices.id;
