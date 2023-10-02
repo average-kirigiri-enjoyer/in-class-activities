@@ -34,14 +34,17 @@ db.query('SELECT COUNT(id) AS total_count FROM favorite_books GROUP BY in_stock'
 //logs the smallest number of copies available for a single book
 //logs the average number of copies available for each book
 //repeats the above for all five sections
-db.query('SELECT SUM(quantity) AS total_in_section, MAX(quantity) AS max_quantity, MIN(quantity) AS min_quantity, AVG(quantity) AS avg_quantity FROM favorite_books GROUP BY section', function (err, results) {
+db.query('SELECT SUM(quantity) AS total_in_section, MAX(quantity) AS max_quantity, MIN(quantity) AS min_quantity, AVG(quantity) AS avg_quantity FROM favorite_books GROUP BY section', function (err, results)
+{
   console.log(results);
 });
 
-app.use((req, res) => {
+app.use((req, res) =>
+{
   res.status(404).end();
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, () =>
+{
   console.log(`Server running on port ${PORT}`);
 });
