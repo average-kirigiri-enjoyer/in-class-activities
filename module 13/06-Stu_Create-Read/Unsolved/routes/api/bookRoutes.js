@@ -2,24 +2,31 @@ const router = require('express').Router();
 const Book = require('../../models/Book');
 
 // TODO: Add a comment describing the purpose of this route
+//upon receiving a GET request to the main page, retrieves all data from the Book table and responds to the request
+//with that data as a JSON string
 router.get('/', (req, res) => {
   // TODO: Add a comment describing the functionality of this method
+  //retrieves all data in the Book table, and responds to the request with the data as a JSON string
   Book.findAll().then((bookData) => {
     res.json(bookData);
   });
 });
 
 // TODO: Add a comment describing the purpose of this route
+//runs the following code upon receiving a GET request to the /paperbacks page
 router.get('/paperbacks', (req, res) => {
   Book.findAll({
     // TODO: Add a comment describing the functionality of this property
+    // orders the books by their titles
     order: ['title'],
     // TODO: Add a comment describing the functionality of this property
+    // only selects book entries to order (as per the above) if they have the is_paperback field set to true
     where: {
       is_paperback: true
     },
     attributes: {
       // TODO: Add a comment describing the functionality of this property
+      // exclude the is_paperback and edition fields from the results of the SQL query
       exclude: ['is_paperback', 'edition']
     }
   }).then((bookData) => {
@@ -28,8 +35,11 @@ router.get('/paperbacks', (req, res) => {
 });
 
 // TODO: Add a comment describing the purpose of this route
+// route parameter for recieving a GET request for a specific ID
 router.get('/:id', (req, res) => {
   // TODO: Add a comment describing the functionality of this method
+  // findByPk finds an entry in a table using its primary key
+  // retrieves the data regarding a book in the Book table whose ID matches the parameter received in the GET request
   Book.findByPk(req.params.id).then((bookData) => {
     res.json(bookData);
   });
