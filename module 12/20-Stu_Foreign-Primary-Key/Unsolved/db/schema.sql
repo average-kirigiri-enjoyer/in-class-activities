@@ -17,9 +17,7 @@ CREATE TABLE customer_order
   id INT NOT NULL,
   customer_id INT,
   order_details TEXT,
-  FOREIGN KEY (customer_id)
-  REFERENCES customers(id)
-  ON DELETE SET NULL
+  FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE SET NULL
 );
 
 INSERT INTO customers (id, first_name, last_name)

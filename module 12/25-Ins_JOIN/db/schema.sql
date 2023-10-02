@@ -3,12 +3,14 @@ CREATE DATABASE courses_db;
 
 USE courses_db;
 
-CREATE TABLE department (
+CREATE TABLE department
+(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE course_names (
+CREATE TABLE course_names
+(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(30) NOT NULL,
   department INT,
