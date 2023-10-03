@@ -7,24 +7,40 @@ class User extends Model {}
 
 User.init(
   {
-    id: {
+    id:
+    {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    username:
+    {
       type: DataTypes.STRING,
+      allowNull: false,
+      validate:
+      {
+        isAlphanumeric: true,
+      }
     },
-    email: {
+    email:
+    {
       type: DataTypes.STRING,
       unique: true,
-      validate: {
+      allowNull: false,
+      validate:
+      {
         isEmail: true,
       },
     },
-    password: {
+    password:
+    {
       type: DataTypes.STRING,
+      allowNull: false,
+      validate:
+      {
+        len: [8, Infinity]
+      }
     },
   },
   {
