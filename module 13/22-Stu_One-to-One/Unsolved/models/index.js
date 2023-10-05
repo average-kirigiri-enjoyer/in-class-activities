@@ -3,7 +3,7 @@ const LibraryCard = require('./LibraryCard');
 
 Reader.hasOne(LibraryCard, {
   foreignKey: 'reader_id',
-  //when a reader is deleted from the database, the effect cascades & their associated library card is also deleted
+  //when a reader object is deleted from the database, the effect cascades & their associated library card is also deleted
   onDelete: 'CASCADE',
 });
 
