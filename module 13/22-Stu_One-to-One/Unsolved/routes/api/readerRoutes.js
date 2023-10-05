@@ -6,6 +6,8 @@ router.get('/', async (req, res) => {
   try {
     const readerData = await Reader.findAll({
       // TODO: Add a comment describing the functionality of this property
+      // retrieves all Reader objects from the database including
+      // any related LibraryCard objects connected to a reader object
       include: [{ model: LibraryCard }],
     });
     res.status(200).json(readerData);

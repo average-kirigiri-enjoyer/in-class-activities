@@ -5,7 +5,8 @@ class LibraryCard extends Model {}
 
 LibraryCard.init(
   {
-    id: {
+    id:
+    {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -17,10 +18,12 @@ LibraryCard.init(
       defaultValue: UUIDV4,
     },
     // TODO: Add a comment describing what this column holds information for 
+    // defines field for LibraryCard called "reader_id", a foreign key referring to the "id" field of the "reader" table / model
     reader_id: {
       type: DataTypes.INTEGER,
       references: {
         // TODO: Add a comment describing where `reader` comes from
+        // "reader" is a separate model with a field called "id", which the above "reader_id" field refers to as a foreign key
         model: 'reader',
         key: 'id',
       },
