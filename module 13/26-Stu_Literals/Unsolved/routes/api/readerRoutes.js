@@ -11,7 +11,9 @@ router.get('/', async (req, res) => {
       attributes: {
         include:
         [
+          [
           sequelize.literal('(SELECT COUNT(*) FROM book WHERE pages BETWEEN 100 AND 300 AND book.reader_id = reader.id)'), "shortBooks",
+          ]
         ],
       },
     });
@@ -29,7 +31,9 @@ router.get('/:id', async (req, res) => {
       attributes: {
         include:
         [
-          sequelize.literal('(SELECT COUNT(*) FROM book WHERE pages BETWEEN 100 AND 300 AND book.reader_id = reader.id)'), "shortBooks",
+          [
+            sequelize.literal('(SELECT COUNT(*) FROM book WHERE pages BETWEEN 100 AND 300 AND book.reader_id = reader.id)'), "shortBooks",
+          ]
         ],
       },
       // TODO: Add a sequelize literal to get a count of short books
