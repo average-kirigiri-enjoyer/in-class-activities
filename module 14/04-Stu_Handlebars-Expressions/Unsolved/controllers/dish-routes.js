@@ -32,7 +32,7 @@ const dishes = [
   },
   {
     dish_name: 'Cape Malay Curry',
-    description: 'Chicken and vegitable curry dish with basmati rice',
+    description: 'Chicken and vegetable curry dish with basmati rice',
   },
 ];
 
@@ -42,11 +42,12 @@ router.get('/', async (req, res) => {
 });
 
 // TODO: Add a route called `/dish/:num` below
+//REMEMBER TO MAKE NOTES ON THE ALT METHOD WHERE THE RES.RENDER DIRECTLY RETURNS THE ARRAY DATA
 router.get('/dish/:num', async (req, res) => {
   res.render('dish',
     {
-      dish_name: dishes[req.params.num].dish_name,
-      body: dishes[req.params.num].description
+      dish_name: dishes[req.params.num - 1].dish_name,
+      body: dishes[req.params.num - 1].description
     });
 });
 

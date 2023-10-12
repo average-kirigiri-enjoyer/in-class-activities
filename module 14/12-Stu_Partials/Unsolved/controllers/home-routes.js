@@ -45,6 +45,8 @@ router.get('/gallery/:id', async (req, res) => {
       ],
     });
 
+    console.log(dbGalleryData);
+
     const gallery = dbGalleryData.get({ plain: true });
     res.render('gallery', { gallery });
   } catch (err) {
