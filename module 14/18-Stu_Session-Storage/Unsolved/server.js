@@ -17,14 +17,20 @@ const PORT = process.env.PORT || 3001;
 const sess = {
   secret: 'Super secret secret',
   // TODO: Add a comment describing the purpose of adding a cookies object to our options to our session object
+  // to help manage user sessions
   cookie: {
     // TODO: Add a comment describing the functionality of the maxAge attribute
+    // sets the max age of the cookie, i.e. it will delete itself after the set timespan elapse (in milliseconds)
     maxAge: 60 * 60 * 1000,
     // TODO: Add a comment describing the functionality of the httpOnly attribute
+    // it restricts the cookie to ony HTTP requests & responses, preventing it from being accessed or otherwise
+    // manipulated by a webpage's JavaScript
     httpOnly: true,
     // TODO: Add a comment describing the functionality of the secure attribute
+    // allows cookies to be set when accessing an HTTP website; not just HTTPS
     secure: false,
     // TODO: Add a comment describing the functionality of the sameSite attribute
+    // prevents cookies from being sent when the user is not interacting directly with the site the cookie originated from
     sameSite: 'strict',
   },
   resave: false,
