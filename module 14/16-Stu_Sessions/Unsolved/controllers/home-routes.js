@@ -52,15 +52,19 @@ router.get('/gallery/:id', async (req, res) => {
   }
 });
 
-// GET one painting
-router.get('/painting/:id', async (req, res) => {
-  try {
-    const dbPaintingData = await Painting.findByPk(req.params.id);
+//GET route for viewing a specific painting
+router.get('/painting/:id', async (req, res) =>
+{
+  try
+  {
+    const dbPaintingData = await Painting.findByPk(req.params.id); //retrieves data from the database on the painting the user wants to view
+    const painting = dbPaintingData.get({plain: true}); //converts the above data from a sequelize object to a plain javascript object
 
-    const painting = dbPaintingData.get({ plain: true });
-    // TODO: Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render('painting', { painting, loggedIn: req.session.loggedIn });
-  } catch (err) {
+    //attempts to render the painting.handlebars file, sending the plain javascript 'painting' data, and the value of the loggedIn session variable
+    res.render('painting', { painting, loggedIn: req.session.loggedIn }); 
+  }
+  catch (err)
+  {
     console.log(err);
     res.status(500).json(err);
   }

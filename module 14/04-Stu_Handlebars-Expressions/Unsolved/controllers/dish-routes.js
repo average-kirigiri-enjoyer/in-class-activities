@@ -43,12 +43,15 @@ router.get('/', async (req, res) => {
 
 // TODO: Add a route called `/dish/:num` below
 //REMEMBER TO MAKE NOTES ON THE ALT METHOD WHERE THE RES.RENDER DIRECTLY RETURNS THE ARRAY DATA
-router.get('/dish/:num', async (req, res) => {
+/*router.get('/dish/:num', async (req, res) => {
   res.render('dish',
     {
       dish_name: dishes[req.params.num - 1].dish_name,
       body: dishes[req.params.num - 1].description
     });
-});
+});*/
+
+//when data regarding a specific dish is requested, attempt to render that dish's data to the dish.handlebars page
+router.get('/dish/:num', async (req, res) => res.render('dish', dishes[req.params.num - 1]));
 
 module.exports = router;

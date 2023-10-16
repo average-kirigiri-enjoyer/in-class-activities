@@ -1,22 +1,27 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// CREATE new user
+//POST route for creating a new user
 router.post('/', async (req, res) => {
-  try {
-    const dbUserData = await User.create({
+  try
+  {
+    //attempts to create a new user via information in the request body
+    const dbUserData = await User.create(
+    {
       username: req.body.username,
       email: req.body.email,
       password: req.body.password,
     });
 
-    // TODO: Set up sessions with the 'loggedIn' variable
-    req.session.save(() => {
-      // TODO: Set the 'loggedIn' session variable to 'true'
+    //creates a "variable" called loggedIn, sets it to 'true', and saves it to session storage
+    req.session.save(() =>
+    {
       req.session.loggedIn = true;
       res.status(200).json(dbUserData);
     });
-  } catch (err) {
+  }
+  catch (err)
+  {
     console.log(err);
     res.status(500).json(err);
   }

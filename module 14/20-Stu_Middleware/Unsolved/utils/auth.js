@@ -1,6 +1,14 @@
-const withAuth = (req, res, next) => {
-  // TODO: If the user is not logged in, redirect the user to the login page
-  // TODO: If the user is logged in, allow them to view the paintings
+const withAuth = (req, res, next) =>
+{
+  //If the user is not logged in, redirect the user to the login page
+  if (!req.session.loggedIn)
+  {
+    res.redirect('/login');
+  }
+  else //otherwise (i.e. they are logged in, proceed to routing process)
+  {
+    next();
+  }
 };
 
 module.exports = withAuth;

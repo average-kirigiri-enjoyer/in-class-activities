@@ -8,17 +8,19 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
-const app = express();
+
 const PORT = process.env.PORT || 3001;
 
-// Set up sessions
-const sess = {
-  secret: 'Super secret secret',
-  resave: false,
-  saveUninitialized: true,
+const app = express(); //initializes express application
+
+const sess =
+{
+  secret: 'complex secret string goes here', //string used for signing the session ID cookie (THIS SHOULD BE A .ENV VARIABLE)
+  resave: false, //sets session data to only be updated when it is modified, instead of on every request
+  saveUninitialized: true, //sets uninitialized session data to be saved, e.g. when a user first visits a site, a session data will be stored, albeit empty
 };
 
-app.use(session(sess));
+app.use(session(sess)); //sets express application to utilize the above session
 
 const hbs = exphbs.create({ helpers });
 
