@@ -7,20 +7,20 @@ describe('Queue class', () => {
 
   test('Can instantiate a new queue', () => {
     const queue = new Queue();
-    expect(queue).toEqual({"container": []});
+    expect(queue).toEqual({"queue": []});
   });
 
   test('Can instantiate a new queue with an array', () => {
-    expect(queue).toEqual( { "container": [1, 2, 3, 4] } );
+    expect(queue).toEqual( { "queue": [1, 2, 3, 4] } );
   });
 
   test('Can add a new item at the end of the queue', () => {
     queue.addToQueue(newItem);
-    expect(queue).toEqual( { "container": [1, 2, 3, 4, 5] } );
+    expect(queue).toEqual( { "queue": [1, 2, 3, 4, 5] } );
   });
 
   test('Can remove an item from the beginning of the queue', () => {
     queue.removeFromQueue(newItem);
-    expect(queue).toEqual( { "container": [2, 3, 4, 5] } );
+    expect(queue).toEqual( { "queue": [2, 3, 4, 5] } );
   });
 });
