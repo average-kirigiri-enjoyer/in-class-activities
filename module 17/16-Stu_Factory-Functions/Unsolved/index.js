@@ -1,15 +1,16 @@
 // TODO: Fix the `greet` function so that it returns the correct values.
-function student(name, gradeYear) {
-  let studentInfo = {
+function student(name, gradeYear)
+{
+  let studentInfo =
+  {
     name: name,
     gradeYear: gradeYear,
   };
 
   return {
-    greet: function () {
-      console.log(
-        `My name is ${this.name} and I am in ${this.gradeYear} grade`
-      );
+    greet: function ()
+    {
+      console.log(`My name is ${studentInfo.name} and I am in ${studentInfo.gradeYear} grade`);
     },
   };
 }

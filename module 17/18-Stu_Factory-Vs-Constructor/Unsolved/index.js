@@ -1,13 +1,19 @@
 // TODO: Refactor the class to a factory function.
-class Lesson {
-  constructor() {
-    this.title = 'Module 17 - Computer Science';
-    this.description = 'CS for JS';
-  }
-  information() {
-    console.log(this.title, this.description);
-  }
-}
+const lessonInfo = (state) =>
+({
+  information: () => console.log(state.title, state.description),
+});
 
-const csForJS = new Lesson();
+const Lesson = (title, description) =>
+{
+  const state =
+  {
+    title,
+    description,
+  };
+
+  return {...lessonInfo(state)};
+};
+
+const csForJS = Lesson('Module 17 - Computer Science', 'CS for JS');
 csForJS.information();
