@@ -1,5 +1,7 @@
 # 📖 Create and View Data Using MongoDB Compass
 
+db.bookCollection.updateOne({_id: ObjectId('65498c70580ccd5dd4181389')}, {$set: {author: "Elisabetta Dami"}});
+
 Work with a partner to implement the following user story:
 
 * As a developer, I want to create a MongoDB database to store data.
