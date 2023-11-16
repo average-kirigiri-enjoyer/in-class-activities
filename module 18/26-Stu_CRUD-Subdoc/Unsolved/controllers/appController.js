@@ -25,7 +25,10 @@ module.exports = {
   // TODO: Add comments to the functionality of the createApplication method
   async createApplication(req, res) {
     try {
+      //attempts to create a new object to the Application table using data in the request body
       const application = await Application.create(req.body);
+
+      //finds and updates a user with an ID matching that of the userId in the request body, and adds the application's ID to the object dataset
       const user = await User.findOneAndUpdate(
         { _id: req.body.userId },
         { $addToSet: { applications: application._id } },
