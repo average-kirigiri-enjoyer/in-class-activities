@@ -1,5 +1,11 @@
 export const headerClick = () => {
   const header = document.getElementById('header');
+
+  if (module.hot && header.style.color === 'black') {
+    header.style.color = 'orange'
+    return;
+  }
+
   if (header.style.color === 'blue') {
     header.style.color = 'black';
   } else {
