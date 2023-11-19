@@ -1,5 +1,5 @@
 {
-  "name": "14-stu_client-server-unsolved",
+  "name": "16-stu_service-workers-solved",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -16,10 +16,5 @@
   },
   "devDependencies": {
     "concurrently": "^5.2.0"
-  },
-  "comments": {
-    "comment-start:dev": "TODO: simultaneously navigates to the client folder, creates the webpack build, and starts the server",
-    "comment-concurrently": "TODO: 'concurrently' allows you to run multiple commands simultaneously"
   }
 }
-
