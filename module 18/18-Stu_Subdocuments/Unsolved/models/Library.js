@@ -10,9 +10,7 @@ const bookSchema = new mongoose.Schema(
 
 const librarySchema = new mongoose.Schema({
   name: { type: String, required: true },
-  //
   // TODO: Add the `books` subdocument to the parent document as an array
-  //
   books: [bookSchema],
   lastAccessed: { type: Date, default: Date.now },
 });
