@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 
 import { ADD_THOUGHT } from '../../utils/mutations';
-import { QUERY_PROFILES } from '../../utils/queries';
+import { QUERY_THOUGHTS } from '../../utils/queries';
 
 const ThoughtForm = () => {
   const [formState, setFormState] = useState({
@@ -13,12 +13,11 @@ const ThoughtForm = () => {
 
   // Set up our mutation with an option to handle errors
   // TODO: Add comment describing the functionality of the useMutation second argument & refetchQueries property
-  const [addThought, { error }] = useMutation
-  (ADD_THOUGHT, {
-    refetchQueries: [
-      QUERY_PROFILES,
-      'allProfiles'
-    ]
+  // refetchQueries retrieves the specified data - in this case, all thoughts(?)
+  // this way, it keeps the client side data up to date after the mutation is made
+  const [addThought, { error }] = useMutation(ADD_THOUGHT,
+  {
+    refetchQueries: [QUERY_THOUGHTS, 'allProfiles']
   });
 
   const handleFormSubmit = async (event) => {
@@ -32,6 +31,14 @@ const ThoughtForm = () => {
       });
 
       // TODO: Add a comment describing why we no longer need to reload the page
+      // because the addThought data is acquired through the useMutation hook, which has the refetchQueries properties attached
+      // the client-side data is automatically updated, and since we're working with react, those changes will be immediately
+      // reflected on the page without having to reload
+
+      // Instead of refreshing the page, the query dispatched
+      // at the src/pages/Home.jsx level is refetched, allowing the updated data
+      // to be passed down to the ThoughtList component for display.
+      // Then, we can directly clear the form state.
       setCharacterCount(0);
       setFormState({
         thoughtText: '',
