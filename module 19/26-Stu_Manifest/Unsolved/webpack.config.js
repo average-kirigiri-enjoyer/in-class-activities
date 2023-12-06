@@ -18,7 +18,6 @@ module.exports = () => {
         template: './index.html',
         title: 'TODOs List'
       }),
-
       new GenerateSW(),
       new WebpackPwaManifest({
         name: 'TODOs',
